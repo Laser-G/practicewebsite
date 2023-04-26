@@ -3,18 +3,18 @@
 <header>
 <nav>
   <script>
-  const nav = document.querySelector('nav ul');
-  const headers = document.querySelectorAll('h2');
-
-  headers.forEach(header => {
-    const link = document.createElement('a');
-    link.textContent = header.textContent;
-    link.href = '#' + header.id;
-
-    const listItem = document.createElement('li');
-    listItem.appendChild(link);
-    nav.appendChild(listItem);
-  });
+  var headings = document.querySelectorAll('h2');
+  var navList = document.createElement('ul');
+  for (var i = 0; i < headings.length; i++) {
+    var navItem = document.createElement('li');
+    var navLink = document.createElement('a');
+    var navText = document.createTextNode(headings[i].textContent);
+    navLink.setAttribute('href', '#' + headings[i].getAttribute('id'));
+    navLink.appendChild(navText);
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  }
+  document.body.appendChild(navList);
 </script>
   </nav>
 </header>
@@ -27,7 +27,7 @@
   <div class="hero">
     <img src="https://i.ibb.co/rwvh0Zj/Aaron-Judge-point-removebg-preview.png">
   </div>
-     <h2>Key</h2>
+     <h2 id="Key">Key</h2>
   <div id="Key">
     <div class="column">
         <h3>Ratings</h3>
@@ -62,7 +62,7 @@
     </div>
 </div>
   <div id="Lineup">
-    <h2>Lineup</h2>
+    <h2 id="Lineup">Lineup</h2>
     <ol>
       <li>
         <span class="list-item">SS</span> <strong>ANTHONY VOLPE</strong><br><br>
