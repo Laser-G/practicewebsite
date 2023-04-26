@@ -10,34 +10,14 @@
   </head>
 <body>
       <nav>
-  <ul id="navLinks">
-    <!-- Navigation links will be added dynamically by the script -->
-    <div></div>
+  <ul>
+    <li><a href="#Key">Key</a></li>
+    <li><a href="#Lineup">Lineup</a></li>
+    <li><a href="#Bench">Bench</a></li>
+    <li><a href="#Rotation">Rotation</a></li>
+    <li><a href="#Bullpen">Bullpen</a></li>
   </ul>
 </nav>
-  <script>
-  var headings = document.querySelectorAll('h2');
-  var navList = document.createElement('ul');
-  for (var i = 0; i < headings.length; i++) {
-    var navItem = document.createElement('li');
-    var navLink = document.createElement('a');
-    var navText = document.createTextNode(headings[i].textContent);
-    navLink.setAttribute('href', '#' + headings[i].getAttribute('id'));
-    navLink.appendChild(navText);
-    navLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      var target = document.querySelector(this.getAttribute('href'));
-      var targetOffset = target.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: targetOffset,
-        behavior: "smooth"
-      });
-    });
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
-  }
-  document.body.appendChild(navList);
-</script>
   <h1><strong>NEW YORK YANKEES</strong></h1>
   <div class="hero">
     <img src="https://i.ibb.co/rwvh0Zj/Aaron-Judge-point-removebg-preview.png">
