@@ -17,6 +17,31 @@ font-family: "Times New Roman", serif;
     margin-right: 20px
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 h1 {
 color: #d4af37;
 text-align: center;
