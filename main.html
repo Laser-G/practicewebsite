@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+<header>
+<nav>
+  <script>
+  const nav = document.querySelector('nav ul');
+  const headers = document.querySelectorAll('h2');
+
+  headers.forEach(header => {
+    const link = document.createElement('a');
+    link.textContent = header.textContent;
+    link.href = '#' + header.id;
+
+    const listItem = document.createElement('li');
+    listItem.appendChild(link);
+    nav.appendChild(listItem);
+  });
+</script>
+  </nav>
+</header>
 <head>
   <title>Yankees Ratings</title>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -134,3 +154,4 @@
     </ol>
   </div>
 </body>
+          </html>
